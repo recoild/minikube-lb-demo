@@ -69,3 +69,15 @@ spec:
 <pre><code>kubectl apply -f images/service.yml</code></pre>
 <p>이제 Minikube에서 할당된 IP와 포트를 통해 애플리케이션에 접근할 수 있습니다. 할당된 IP를 확인하려면 아래 명령어를 사용하세요:</p>
 <pre><code>minikube service helloworld-service</code></pre>
+
+## 문제점
+
+### 1. minikube 에서 이미지 인식
+
+minikube는 도커 컨테이너로서 실행되고 있습니다.
+
+도커 컨테이너를 실행하고 있는 호스트 머신에서 `docker build` 를 수행해서 만든 이미지는 호스트 머신에서만 존재합니다.
+
+그러므로, 컨테이너로 실행되고 있는 minikube가 호스트 머신의 도커 이미지를 알 수 없으니 docker hub 사이트같은 원격지에 업로드합니다.
+
+이제 minikube는 원격지의 이미지를 다운로드하여 디플로이먼트를 실행할 수 있습니다.
