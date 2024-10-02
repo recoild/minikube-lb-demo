@@ -70,9 +70,9 @@ spec:
 <p>이제 Minikube에서 할당된 IP와 포트를 통해 애플리케이션에 접근할 수 있습니다. 할당된 IP를 확인하려면 아래 명령어를 사용하세요:</p>
 <pre><code>minikube service helloworld-service</code></pre>
 
-## 문제점
+## 트러블슈팅
 
-### 1. minikube 에서 이미지 인식
+### minikube 이미지 인식
 
 minikube는 도커 컨테이너로서 실행되고 있습니다.
 
